@@ -26,6 +26,8 @@ The purpose of this coding challenge is to gauge knowledge in Ruby/Rails. In the
 
 5. This is a backend coding challenge. Please do **NOT** spend your time building out any kind of UI.
 
+6. You are allowed to install and use third-party packages.
+
 ## Getting Started
 1. Run: `bundle install`
 2. Run: `bundle exec rails db:create`
