@@ -14,7 +14,7 @@ The purpose of this coding challenge is to gauge knowledge in Ruby/Rails. In the
 
 - **Investment** - A generic term used for simplicity in the coding challenge. A **Fund** can invest in a **Company** in myriad ways, but for simplicity, we are just contemplating a simple transaction whereby a **Fund** purchases shares in a **Company** for a certain amount of dollars during an **Equity Financing**.
 
-## Setup
+## Setup/Notes
 
 1. Clone/Download this repository. This is a default Rails application with PostgreSQL used as the database and some testing gems to help you get started.
 
@@ -26,30 +26,38 @@ The purpose of this coding challenge is to gauge knowledge in Ruby/Rails. In the
 
 5. This is a backend coding challenge. Please do **NOT** spend your time building out any kind of UI.
 
+## Getting Started
+1. Run: `bundle install`
+2. Run: `bundle exec rails db:create`
+3. Run: `bundle exec rspec`
+
 ## Base Model Columns
 
 - **Fund**
-  - Name - `String`
+  - name - `String`
 - **Company**
-  - Name - `String`
-  - Founded - `Date`
+  - name - `String`
+  - founded - `Date`
 - **Equity Financing**
-  - Date - `Date`
-  - Fully Diluted Shares - `Big Int`
+  - date - `Date`
+  - total_shares - `Big Int`
 - **Investment**
-  - Shares - `Big Int`
-  - Amount - `Decimal (10,2)`
+  - shares - `Big Int`
+  - amount - `Decimal (10,2)`
+
+## Goals
+
+- [ ] The code passes the test suite.
 
 ## Acceptance Criteria
 
 - [ ] You have filled out the _required_ parts of the `code-challenge-notes.md` and made your first commit.
-- [ ] The code passes the test suite.
 - [ ] The code is well organized.
 - [ ] The code follows Ruby/Rails best practices.
-- [ ] The code has good test coverage.
 - [ ] Your Git commit history is clean and meaningful.
 
 ## Submission
 
-1. Zip your project up
+1. Zip your project up.
+
 2. Email your project to [Aumni Eng Recruiting](mailto:eng-recruiting@aumni.fund)
