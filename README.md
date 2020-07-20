@@ -1,24 +1,55 @@
-# README
+<img src="https://aumni-public.s3.amazonaws.com/AUMNI_ALT_Horiz_Color-01.png" alt="Aumni Logo" width="200" height="55">
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Aumni Backend Coding Challenge
 
-Things you may want to cover:
+The purpose of this coding challenge is to gauge knowledge in Ruby/Rails. In the coding challenge you will build a Ruby on Rails application that contains a very small subset of our domain at Aumni. Below you will find some helpful terminology to help you understand what these domain specific terms mean.
 
-* Ruby version
+## Terminology
 
-* System dependencies
+- **Fund** - A Fund is a type of [Investment Vehicle](https://www.investopedia.com/terms/i/investmentvehicle.asp) that invests the money that it has raised into various **Companies**.
 
-* Configuration
+- **Company** - A Company that a **Fund** invests in. Traditionally called a Portfolio Company from the perspective of the **Fund**. This is typically a start-up company that is trying to raise money.
 
-* Database creation
+- **Equity Financing** - Is a round of funding when stock is issued by the **Company** to **Fund**s investing in the **Company**. A **Company** can have multiple **Equity Financing** rounds in which multiple **Fund**s can invest. A **Fund** can invest in the same **Company** in multiple **Equity Financing**s.
 
-* Database initialization
+- **Investment** - A generic term used for simplicity in the coding challenge. A **Fund** can invest in a **Company** in myriad ways, but for simplicity, we are just contemplating a simple transaction whereby a **Fund** purchases shares in a **Company** for a certain amount of dollars during an **Equity Financing**.
 
-* How to run the test suite
+## Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Clone/Download this repository. This is a default Rails application with PostgreSQL used as the database and some testing gems to help you get started.
 
-* Deployment instructions
+2. Make your first commit by filling out the `code-challenge-notes.md` file in the root of this directory.
 
-* ...
+3. Once you have made your first commit you will have 72 hours to make your final commit to complete the code challenge.
+
+4. Please do **NOT** push your code challenge solution to a public repository.
+
+5. This is a backend coding challenge. Please do **NOT** spend your time building out any kind of UI.
+
+## Base Model Columns
+
+- **Fund**
+  - Name - `String`
+- **Company**
+  - Name - `String`
+  - Founded - `Date`
+- **Equity Financing**
+  - Date - `Date`
+  - Fully Diluted Shares - `Big Int`
+- **Investment**
+  - Shares - `Big Int`
+  - Amount - `Decimal (10,2)`
+
+## Acceptance Criteria
+
+- [ ] You have filled out the _required_ parts of the `code-challenge-notes.md` and made your first commit.
+- [ ] The code passes the test suite.
+- [ ] The code is well organized.
+- [ ] The code follows Ruby/Rails best practices.
+- [ ] The code has good test coverage.
+- [ ] Your Git commit history is clean and meaningful.
+
+## Submission
+
+1. Zip your project up
+2. Email your project to [Aumni Eng Recruiting](mailto:eng-recruiting@aumni.fund)
