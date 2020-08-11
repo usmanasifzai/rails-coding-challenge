@@ -59,7 +59,8 @@ The purpose of this coding challenge is to gauge knowledge in Ruby/Rails. In the
 - [ ] Your Git commit history is clean and meaningful.
 
 ## Submission
-
 1. Zip your project up.
 
-2. Email your project to [Aumni Eng Recruiting](mailto:eng-recruiting@aumni.fund)
+2. Upload your zip to http://file.io using the "Upload" button or the `cURL` commands
+
+3. Email the file download URL to [Aumni Eng Recruiting](mailto:eng-recruiting@aumni.fund)
