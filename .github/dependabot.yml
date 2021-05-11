@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: weekly
+      time: "03:00"
+      timezone: America/Denver
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      time: "03:00"
+      timezone: America/Denver
+    open-pull-requests-limit: 10
