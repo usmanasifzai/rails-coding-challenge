@@ -5,16 +5,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Bundle edge Rails instead: gem 'rails', '>= 6.1.3.2', github: 'rails/rails'
 gem 'rails'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '>= 6.0.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+gem 'webpacker', '>= 5.4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -30,7 +30,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen'
-  gem 'web-console'
+  gem 'web-console', '>= 4.1.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen'
@@ -42,15 +42,15 @@ group :development, :test do
 end
 
 group :test do
-  gem 'factory_bot_rails'
-  gem 'rspec-rails'
+  gem 'factory_bot_rails', '>= 6.2.0'
+  gem 'rspec-rails', '>= 5.0.2'
   gem 'simplecov', require: false
   gem 'shoulda-matchers'
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara'
+  gem 'capybara', '>= 3.35.3'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  gem 'webdrivers', '>= 4.6.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
