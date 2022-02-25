@@ -20,14 +20,21 @@ class StatisticsService
 
   def average_current_ownership_of_companies
     investments = @fund.investments 
-    ownerships = investments.map{|investment|owned_shares(investment)/total_shares(investment)}
-    return nil if ownerships.empty?
+    all_ownerships = investments.map{|investment| company_owned_percentage(investment)}
+    return nil if all_ownerships.empty?
     
+    ownerships = same_company_ownerships(all_ownerships)
+    ownerships = ownerships.map{|ownership| ownership[:percentage]}
     average_ownership = ownerships.reduce(:+) / ownerships.size
-    average_ownership
   end
 
   private
+
+  def company_owned_percentage investment
+    percentage = owned_shares(investment)/total_shares(investment)
+    {company_id: investment.equity_financing.company.id , percentage: percentage} 
+  end
+
   def owned_shares investment
     investment.shares.to_f
   end
@@ -44,5 +51,19 @@ class StatisticsService
     middle_right_date_day = dates[center].strftime("%d").to_i
     median_day = (middle_left_date_day + middle_left_date_day) / 2
     median_date = dates[center-1] + median_day
+  end
+
+  def same_company_ownerships ownerships
+    ownerships.reduce ([]) do |combined,val|
+      found = false   
+      combined.each do |ownership|
+        if ownership[:company_id] == val[:company_id]
+          ownership[:percentage] = ownership[:percentage] + val[:percentage]
+          found = true
+        end
+      end
+      combined << val if not found
+      combined
+    end
   end
 end
